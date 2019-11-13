@@ -66,7 +66,7 @@ extern char **environ;
 # define ENV_SIZE 3
 #else
 # define ENV_PRELOAD "LD_PRELOAD"
-# define ENV_SIZE 2
+# define ENV_SIZE 1
 #endif
 
 #define STRINGIFY(x) #x
@@ -105,7 +105,7 @@ static void string_array_release(char const **);
 
 static bear_env_t env_names =
     { ENV_OUTPUT
-    , ENV_PRELOAD
+//    , ENV_PRELOAD
 #ifdef ENV_FLAT
     , ENV_FLAT
 #endif
